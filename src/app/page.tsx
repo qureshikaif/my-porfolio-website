@@ -49,7 +49,7 @@ export default function Home() {
     <main className="overflow-hidden">
       <Navbar />
       <HeroMain />
-      <div className="w-full p-10 bg-[#001C29]">
+      {/* <div className="w-full p-10 bg-[#001C29]">
         <BentoGrid className="w-full mx-auto md:auto-rows-[20rem]">
           {items.map((item, i) => (
             <BentoGridItem
@@ -62,7 +62,7 @@ export default function Home() {
             />
           ))}
         </BentoGrid>
-      </div>
+      </div> */}
     </main>
   );
 }

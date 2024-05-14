@@ -1,45 +1,75 @@
-import React from "react";
-import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
+import EducationHome from "./EducationHome";
+import ExperienceHome from "./ExperienceHome";
+import SkillsHome from "./SkillsHome";
+import { HeroParallax } from "./ui/hero-parallax";
 
-const words = [
+export const projects = [
   {
-    text: "Build",
-    className: "text-white",
+    title: "Summare AI",
+    link: "https://summare.ai",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
   },
   {
-    text: "awesome",
-    className: "text-white",
+    title: "SF Business Solution",
+    link: "https://sf-business.vercel.app",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/cursor.png",
   },
   {
-    text: "apps",
-    className: "text-white",
+    title: "Nosh NFT",
+    link: "https://noshnft.com",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+  },
+
+  {
+    title: "ScriptMatix",
+    link: "https://editorially.org",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
   },
   {
-    text: "with",
-    className: "text-white",
+    title: "TechNTech",
+    link: "https://techntech.netlify.app",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/editrix.png",
   },
   {
-    text: "Aceternity.",
-    className: "text-blue-500 dark:text-blue-500",
+    title: "Sudoku Game",
+    link: "https://sudoku842.netlify.app",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
+  },
+
+  {
+    title: "Pixpel.io",
+    link: "https://pixpel.io",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
+  },
+  {
+    title: "Arbitrage Trading Bot - Under Development",
+    link: "https://arbitrage-one.vercel.app",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
+  },
+  {
+    title: "ADHD Coach",
+    link: "https://tailwindmasterkit.com", // APK Link
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
   },
 ];
 
 const HeroMain = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-[#001C29]">
-      <p className="text-white dark:text-neutral-200 text-base mb-10">
-        The road to freedom starts from here
-      </p>
-      <TypewriterEffectSmooth words={words} />
-      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 mt-10">
-        <button className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm">
-          Join now
-        </button>
-        <button className="w-40 h-10 rounded-xl bg-white text-black border border-black  text-sm">
-          Signup
-        </button>
-      </div>
-    </div>
+    <>
+      <HeroParallax products={projects} />
+      <ExperienceHome />
+      <EducationHome />
+      <SkillsHome />
+    </>
   );
 };
 
