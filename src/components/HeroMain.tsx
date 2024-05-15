@@ -1,6 +1,3 @@
-import EducationHome from "./EducationHome";
-import ExperienceHome from "./ExperienceHome";
-import SkillsHome from "./SkillsHome";
 import { HeroParallax } from "./ui/hero-parallax";
 
 export const projects = [
@@ -63,14 +60,7 @@ export const projects = [
 ];
 
 const HeroMain = () => {
-  return (
-    <>
-      <HeroParallax products={projects} />
-      <ExperienceHome />
-      <EducationHome />
-      <SkillsHome />
-    </>
-  );
+  return <HeroParallax products={projects} />;
 };
 
 export default HeroMain;

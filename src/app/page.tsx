@@ -1,6 +1,11 @@
 "use client";
+import CertificatesHome from "@/components/CertificatesHome";
+import EducationHome from "@/components/EducationHome";
+import ExperienceHome from "@/components/ExperienceHome";
 import HeroMain from "@/components/HeroMain";
 import Navbar from "@/components/Navbar";
+import ProjectsHome from "@/components/ProjectsHome";
+import SkillsHome from "@/components/SkillsHome";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import {
   IconClipboardCopy,
@@ -49,20 +54,11 @@ export default function Home() {
     <main className="overflow-hidden">
       <Navbar />
       <HeroMain />
-      {/* <div className="w-full p-10 bg-[#001C29]">
-        <BentoGrid className="w-full mx-auto md:auto-rows-[20rem]">
-          {items.map((item, i) => (
-            <BentoGridItem
-              key={i}
-              title={item.title}
-              description={item.description}
-              header={item.header}
-              className={item.className}
-              icon={item.icon}
-            />
-          ))}
-        </BentoGrid>
-      </div> */}
+      <ExperienceHome />
+      <EducationHome />
+      <SkillsHome />
+      <CertificatesHome />
+      <ProjectsHome />
     </main>
   );
 }
