@@ -30,19 +30,19 @@ const experiences = [
       "Worked with multi-step animations to create complex, layered effects.",
     ],
   },
-  {
-    title: "The Educators School",
-    date: "2009 - 2020",
-    position: "Computer Science",
-    points: [
-      "Designed and implemented custom themes and layouts for clients using Webflow and WordPress Elementor.",
-      "Ensured responsive design for optimal viewing across multiple devices.",
-      "Utilized Webflow’s rich visual interface to create complex animations and interactions.",
-      "Implemented triggers and animations to enhance user experience and engagement.",
-      "Used timed animations to control the sequence and timing of animations.",
-      "Worked with multi-step animations to create complex, layered effects.",
-    ],
-  },
+  // {
+  //   title: "The Educators School",
+  //   date: "2009 - 2020",
+  //   position: "Computer Science",
+  //   points: [
+  //     "Designed and implemented custom themes and layouts for clients using Webflow and WordPress Elementor.",
+  //     "Ensured responsive design for optimal viewing across multiple devices.",
+  //     "Utilized Webflow’s rich visual interface to create complex animations and interactions.",
+  //     "Implemented triggers and animations to enhance user experience and engagement.",
+  //     "Used timed animations to control the sequence and timing of animations.",
+  //     "Worked with multi-step animations to create complex, layered effects.",
+  //   ],
+  // },
 ];
 
 const EducationHome = () => {

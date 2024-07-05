@@ -12,11 +12,11 @@ export default function Home() {
     <main className="overflow-hidden">
       <Navbar />
       <HeroMain />
+      <ProjectsHome />
       <ExperienceHome />
       <EducationHome />
       <SkillsHome />
       <CertificatesHome />
-      <ProjectsHome />
     </main>
   );
 }
