@@ -3,6 +3,11 @@ import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { SocialIcon } from "react-social-icons";
 import Link from "next/link";
+import SF_Business_Solutions from "@/../public/thumbnails/sf-business-solutions.png";
+import Summare_AI from "@/../public/thumbnails/summare-ai.png";
+import Nosh_NFT from "@/../public/thumbnails/nosh-nft.png";
+import Grand_Cercle from "@/../public/thumbnails/grand-cercle.png";
+import Tech_N_Tech from "@/../public/thumbnails/tech-n-tech.png";
 
 const Navbar = () => {
   const [active, setActive] = useState<string | null>(null);
@@ -27,7 +32,7 @@ const Navbar = () => {
             item="Services"
             className="text-white"
           >
-            <div className="flex flex-col space-y-4 text-sm ">
+            <div className="flex flex-col space-y-4 text-sm">
               <HoveredLink href="/web-dev">Web Development</HoveredLink>
               <HoveredLink href="/interface-design">
                 App Development
@@ -44,27 +49,27 @@ const Navbar = () => {
           >
             <div className="z-50 text-sm grid grid-cols-2 gap-10 p-4">
               <ProductItem
-                title="Algochurn"
-                href="https://algochurn.com"
-                src="https://assets.aceternity.com/demos/algochurn.webp"
+                title="SF Business Solutions"
+                href="https://sfbusinesssolutions.com"
+                src={SF_Business_Solutions}
                 description="Prepare for tech interviews like never before."
               />
               <ProductItem
-                title="Tailwind Master Kit"
-                href="https://tailwindmasterkit.com"
-                src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
+                title="Summare AI"
+                href="https://www.summare.ai"
+                src={Summare_AI}
                 description="Production ready Tailwind css components for your next project"
               />
               <ProductItem
-                title="Moonbeam"
-                href="https://gomoonbeam.com"
-                src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
+                title="Nosh NFT"
+                href="https://noshnft.com"
+                src={Nosh_NFT}
                 description="Never write from scratch again. Go from idea to blog in minutes."
               />
               <ProductItem
-                title="Rogue"
-                href="https://userogue.com"
-                src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
+                title="TechNTech"
+                href="https://techntech.netlify.app"
+                src={Tech_N_Tech}
                 description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
               />
             </div>

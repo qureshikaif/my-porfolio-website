@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 const transition = {
   type: "spring",
@@ -90,7 +90,7 @@ export const ProductItem = ({
   title: string;
   description: string;
   href: string;
-  src: string;
+  src: string | StaticImageData;
 }) => {
   return (
     <Link href={href} className="flex space-x-2">
@@ -99,7 +99,7 @@ export const ProductItem = ({
         width={140}
         height={70}
         alt={title}
-        className="flex-shrink-0 rounded-md shadow-2xl"
+        className="flex-shrink-0 rounded-md shadow-2xl object-cover"
       />
       <div>
         <h4 className="text-xl font-bold mb-1 text-black dark:text-white">
