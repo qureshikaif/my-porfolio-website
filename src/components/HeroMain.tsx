@@ -25,12 +25,12 @@ export const projects = [
     link: "https://noshnft.com",
     thumbnail: Nosh_NFT,
   },
-
   {
-    title: "TechNTech",
-    link: "https://techntech.netlify.app",
-    thumbnail: Tech_N_Tech,
+    title: "ScriptMatix",
+    link: "https://nft-marketplace-exl5.vercel.app",
+    thumbnail: Script_Matix,
   },
+
   {
     title: "Sudoku Game",
     link: "https://sudoku842.netlify.app",
@@ -38,21 +38,21 @@ export const projects = [
   },
 
   {
+    title: "GrandCercle",
+    link: "https://grandcercle.asban.dev",
+    thumbnail: Grand_Cercle,
+  },
+  {
     title: "Pixpel.io",
     link: "https://home.pixpel.io",
     thumbnail: Pixpel,
   },
   {
-    title: "GrandCercle",
-    link: "https://grandcercle.asban.dev",
-    thumbnail: Grand_Cercle,
+    title: "TechNTech",
+    link: "https://techntech.netlify.app",
+    thumbnail: Tech_N_Tech,
   },
 
-  {
-    title: "ScriptMatix",
-    link: "https://nft-marketplace-exl5.vercel.app",
-    thumbnail: Script_Matix,
-  },
   {
     title: "Arbitrage Trading Bot - Under Development",
     link: "https://arbitrage-one.vercel.app",
