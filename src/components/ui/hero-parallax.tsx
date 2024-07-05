@@ -7,7 +7,7 @@ import {
   useSpring,
   MotionValue,
 } from "framer-motion";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 export const HeroParallax = ({
@@ -16,7 +16,7 @@ export const HeroParallax = ({
   products: {
     title: string;
     link: string;
-    thumbnail: string;
+    thumbnail: string | StaticImageData;
   }[];
 }) => {
   const firstRow = products.slice(0, 5);
@@ -126,7 +126,7 @@ export const ProductCard = ({
   product: {
     title: string;
     link: string;
-    thumbnail: string;
+    thumbnail: string | StaticImageData;
   };
   translate: MotionValue<number>;
 }) => {
@@ -139,17 +139,18 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product h-96 w-[30rem] relative flex-shrink-0"
+      className="group/product h-[18.6rem] w-[35rem] relative flex-shrink-0"
     >
       <Link
         href={product.link}
+        target="_blank"
         className="block group-hover/product:shadow-2xl "
       >
         <Image
           src={product.thumbnail}
           height="600"
           width="600"
-          className="object-cover object-left-top absolute h-full w-full inset-0"
+          className="object-contain object-left-top absolute h-full w-full inset-0"
           alt={product.title}
         />
       </Link>

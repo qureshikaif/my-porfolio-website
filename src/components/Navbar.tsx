@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { Github, Linkedin, Phone } from "lucide-react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { SocialIcon } from "react-social-icons";
 import Link from "next/link";
@@ -82,19 +81,19 @@ const Navbar = () => {
             bgColor="black"
           />
           <SocialIcon
-            url="https://linkedin.com/"
+            url="https://linkedin.com/in/mohammad-kaif-qureshi-77052a1a5/"
             network="linkedin"
             style={{ width: 40, height: 40 }}
             bgColor="black"
           />
           <SocialIcon
-            url="https://upwork.com/"
+            url="https://www.upwork.com/freelancers/~01dcfe9b5f254cca69?mp_source=share"
             network="upwork"
             style={{ width: 40, height: 40 }}
             bgColor="black"
           />
           <SocialIcon
-            url="https://gmail.com/"
+            url="mailto:kaifqureshi.dev@gmail.com"
             network="email"
             style={{ width: 40, height: 40 }}
             bgColor="black"
