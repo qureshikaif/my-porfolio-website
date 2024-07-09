@@ -1,6 +1,11 @@
 import { BackgroundGradient } from "./ui/background-gradient";
 import Image from "next/image";
 import Pixpel from "@/../public/thumbnails/pixpel.png";
+import Summare_AI from "@/../public/thumbnails/summare-ai.png";
+import SF_Business from "@/../public/thumbnails/sf-business-solutions.png";
+import Nosh_NFT from "@/../public/thumbnails/nosh-nft.png";
+import ScriptMatix from "@/../public/thumbnails/script-matix.png";
+import TechNTech from "@/../public/thumbnails/tech-n-tech.png";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 
@@ -12,32 +17,32 @@ const projects = [
       "The Air Jordan 4 Retro Reimagined Bred will release on Saturday, February 17, 2024. Your best opportunity to get these right now is by entering raffles and waiting for the official releases.",
   },
   {
-    banner: Pixpel,
-    title: "Pixpel.io",
+    banner: Summare_AI,
+    title: "Summare-AI",
     description:
       "The Air Jordan 4 Retro Reimagined Bred will release on Saturday, February 17, 2024. Your best opportunity to get these right now is by entering raffles and waiting for the official releases.",
   },
   {
-    banner: Pixpel,
-    title: "Pixpel.io",
+    banner: SF_Business,
+    title: "SF Business Solutions",
     description:
       "The Air Jordan 4 Retro Reimagined Bred will release on Saturday, February 17, 2024. Your best opportunity to get these right now is by entering raffles and waiting for the official releases.",
   },
   {
-    banner: Pixpel,
-    title: "Pixpel.io",
+    banner: Nosh_NFT,
+    title: "Nosh NFT",
     description:
       "The Air Jordan 4 Retro Reimagined Bred will release on Saturday, February 17, 2024. Your best opportunity to get these right now is by entering raffles and waiting for the official releases.",
   },
   {
-    banner: Pixpel,
-    title: "Pixpel.io",
+    banner: ScriptMatix,
+    title: "ScriptMatix",
     description:
       "The Air Jordan 4 Retro Reimagined Bred will release on Saturday, February 17, 2024. Your best opportunity to get these right now is by entering raffles and waiting for the official releases.",
   },
   {
-    banner: Pixpel,
-    title: "Pixpel.io",
+    banner: TechNTech,
+    title: "TechNTech",
     description:
       "The Air Jordan 4 Retro Reimagined Bred will release on Saturday, February 17, 2024. Your best opportunity to get these right now is by entering raffles and waiting for the official releases.",
   },
@@ -46,7 +51,7 @@ const projects = [
 const ProjectsHome = () => {
   return (
     <div className="bg-[#0e191e] pb-10 pt-20 px-24">
-      <h1 className="text-6xl font-extrabold text-white text-center py-10">
+      <h1 className="text-6xl font-extrabold text-white text-center py-10 mb-20">
         Projects
       </h1>
       <div className="grid grid-cols-3 gap-10">
