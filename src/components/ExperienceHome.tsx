@@ -34,8 +34,8 @@ const experiences = [
 
 const ExperienceHome = () => {
   return (
-    <div className="bg-[#0e191e] h-screen py-10">
-      <h1 className="text-6xl font-extrabold text-white text-center">
+    <div className="bg-[#0e191e] lg:h-screen py-10 px-8 lg:px-0">
+      <h1 className="lg:text-6xl text-3xl font-extrabold text-white text-center">
         Experience
       </h1>
       <TracingBeam className="mt-10">

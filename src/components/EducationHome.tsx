@@ -47,8 +47,8 @@ const experiences = [
 
 const EducationHome = () => {
   return (
-    <div className="bg-[#0e191e] py-44">
-      <h1 className="text-6xl font-extrabold text-white text-center pt-10">
+    <div className="bg-[#0e191e] py-44 px-8 lg:px-0">
+      <h1 className="lg:text-6xl text-3xl font-extrabold text-white text-center pt-10">
         Education
       </h1>
       <TracingBeam className="mt-10">
