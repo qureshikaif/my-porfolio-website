@@ -52,25 +52,25 @@ const Navbar = () => {
                 title="SF Business Solutions"
                 href="https://sfbusinesssolutions.com"
                 src={SF_Business_Solutions}
-                description="Prepare for tech interviews like never before."
+                description="SF Business Solutions is a website built with Next.js using App Router and Shadcn UI library for a business. The frontend is currently deployed on Vercel for development purposes. This website is currently under development."
               />
               <ProductItem
                 title="Summare AI"
                 href="https://www.summare.ai"
                 src={Summare_AI}
-                description="Production ready Tailwind css components for your next project"
+                description="SummareAI is an AI-powered web article summarizer that I had the opportunity to work on. The primary goal of this project was to transition the existing website from React to Next.js to enhance SEO performance. I was responsible for rebuilding the website from scratch using Next.js and the Next UI library. SummareAI is an AI-powered web article summarizer that I had the opportunity to work on. The primary goal of this project was to transition the existing website from React to Next.js to enhance SEO performance. I was responsible for rebuilding the website from scratch using Next.js and the Next UI library."
               />
               <ProductItem
                 title="Nosh NFT"
                 href="https://noshnft.com"
                 src={Nosh_NFT}
-                description="Never write from scratch again. Go from idea to blog in minutes."
+                description="NoshNFT is a cutting-edge NFT marketplace built with a modern tech stack to provide a seamless experience for buying and selling NFTs The platform is designed with a focus on performance, scalability, and security"
               />
               <ProductItem
                 title="TechNTech"
                 href="https://techntech.netlify.app"
                 src={Tech_N_Tech}
-                description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+                description="Techntech is a premier e-commerce platform dedicated to the buying and selling of laptops. Techntech offers a vast selection of the latest laptops from top brands, catering to both individual consumers and businesses. A user-friendly interface, competitive pricing, and comprehensive product information make it easy for customers to find the perfect laptop to meet their needs."
               />
             </div>
           </MenuItem>
