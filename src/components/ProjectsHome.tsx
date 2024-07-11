@@ -6,7 +6,10 @@ import SF_Business from "@/../public/thumbnails/sf-business-solutions.png";
 import Nosh_NFT from "@/../public/thumbnails/nosh-nft.png";
 import ScriptMatix from "@/../public/thumbnails/script-matix.png";
 import TechNTech from "@/../public/thumbnails/tech-n-tech.png";
+import PixpelApp from "@/../public/thumbnails/pxipel-app.jpeg";
+import ADHD_Coach_App from "@/../public/thumbnails/adhd-coach-app.jpeg";
 import { ExternalLink } from "lucide-react";
+
 import Link from "next/link";
 
 const webprojects = [
@@ -56,23 +59,23 @@ const webprojects = [
 
 const mobileprojects = [
   {
-    banner: Pixpel,
+    banner: PixpelApp,
     title: "Pixpel.io",
     description:
       "The Air Jordan 4 Retro Reimagined Bred will release on Saturday, February 17, 2024. Your best opportunity to get these right now is by entering raffles and waiting for the official releases.",
   },
   {
-    banner: Summare_AI,
+    banner: ADHD_Coach_App,
     title: "ADHD Coach",
     description:
       "The Air Jordan 4 Retro Reimagined Bred will release on Saturday, February 17, 2024. Your best opportunity to get these right now is by entering raffles and waiting for the official releases.",
   },
-  {
-    banner: SF_Business,
-    title: "LeafLink",
-    description:
-      "The Air Jordan 4 Retro Reimagined Bred will release on Saturday, February 17, 2024. Your best opportunity to get these right now is by entering raffles and waiting for the official releases.",
-  },
+  // {
+  //   banner: SF_Business,
+  //   title: "LeafLink",
+  //   description:
+  //     "The Air Jordan 4 Retro Reimagined Bred will release on Saturday, February 17, 2024. Your best opportunity to get these right now is by entering raffles and waiting for the official releases.",
+  // },
 ];
 
 const ProjectsHome = () => {
@@ -119,7 +122,7 @@ const ProjectsHome = () => {
                 alt="jordans"
                 height="400"
                 width="400"
-                className="object-contain rounded-t-[10px]"
+                className="object-top object-cover rounded-t-[10px] h-60"
               />
               <div className="flex items-center space-x-2">
                 <p className="text-base sm:text-xl text-white mt-4 mb-2 dark:text-neutral-200 pl-5">
