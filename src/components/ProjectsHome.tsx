@@ -15,7 +15,7 @@ import Link from "next/link";
 const webprojects = [
   {
     banner: Pixpel,
-    title: "Pixpel.io",
+    title: "Pixpel.io - Web",
     description:
       "Pixpel.io is a cutting-edge Web3 gaming and cryptocurrency platform that revolutionizes the gaming experience by integrating blockchain technology. At Pixpel.io, players can immerse themselves in a variety of innovative games, earn rewards in cryptocurrency, and participate in a decentralized gaming ecosystem. The platform offers seamless, secure transactions and empowers gamers with true ownership of in-game assets. Join Pixpel.io today to explore the future of gaming and cryptocurrency, where entertainment and digital finance converge.",
     link: "https://home.pixpel.io",
@@ -60,7 +60,7 @@ const webprojects = [
 const mobileprojects = [
   {
     banner: PixpelApp,
-    title: "Pixpel.io",
+    title: "Pixpel.io - App",
     description:
       "The Air Jordan 4 Retro Reimagined Bred will release on Saturday, February 17, 2024. Your best opportunity to get these right now is by entering raffles and waiting for the official releases.",
   },
@@ -85,9 +85,9 @@ const ProjectsHome = () => {
         Projects
       </h1>
       <h2 className="text-white text-xl my-3">Web Apps</h2>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-6 gap-10">
         {webprojects.map((project, index) => (
-          <div key={index} className="lg:max-w-[96%]">
+          <div key={index} className="lg:max-w-[95%]">
             <BackgroundGradient className="bg-[#0e191e] h-96 rounded-[10px] text-white max-w-sm p-0 dark:bg-zinc-900">
               <Image
                 src={project.banner}
@@ -113,9 +113,9 @@ const ProjectsHome = () => {
         ))}
       </div>
       <h2 className="text-white text-xl mb-3 mt-36">Mobile Apps</h2>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-6 gap-10">
         {mobileprojects.map((project, index) => (
-          <div key={index} className="lg:max-w-[96%]">
+          <div key={index} className="lg:max-w-[95%]">
             <BackgroundGradient className="bg-[#0e191e] rounded-[10px] text-white max-w-sm p-0 dark:bg-zinc-900">
               <Image
                 src={project.banner}

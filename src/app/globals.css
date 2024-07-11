@@ -2,21 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
---webkit-scrollbar-thumb {
-  background-color: #4a5568;
-  border-radius: 10px;
-}
-
---webkit-scrollbar-track {
-  background-color: #2d3748;
-}
-
---webkit-scrollbar {
+/* Correcting the syntax for the scrollbar styles */
+::-webkit-scrollbar {
   width: 4px;
   background-color: red;
 }
 
+::-webkit-scrollbar-thumb {
+  background-color: #4a5568;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #2d3748;
+}
+
+/* Correcting the syntax for the class styles */
 .nav-social-icons {
-  width: 40;
-  height: 40;
+  width: 40px;
+  height: 40px;
 }
