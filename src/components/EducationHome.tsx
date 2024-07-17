@@ -1,10 +1,15 @@
 import React from "react";
 import { TracingBeam } from "./ui/tracing-beam";
+import Image from "next/image";
+import BUKC from "@/../public/bukc.png";
+import Educators from "@/../public/educators.png";
+import Fazaia from "@/../public/fazaia.png";
 
 const experiences = [
   {
     title: "Bahria University, Karachi Campus",
     date: "September 2022 - Present",
+    image: BUKC,
     position: "BSIT",
     points: [
       "Developed beautiful front-end interfaces using React.js and Next.js.",
@@ -20,6 +25,7 @@ const experiences = [
   {
     title: "Fazaia Degree College, Faisal",
     date: "2020 - 2022",
+    image: Fazaia,
     position: "Computer Science",
     points: [
       "Designed and implemented custom themes and layouts for clients using Webflow and WordPress Elementor.",
@@ -30,28 +36,54 @@ const experiences = [
       "Worked with multi-step animations to create complex, layered effects.",
     ],
   },
-  // {
-  //   title: "The Educators School",
-  //   date: "2009 - 2020",
-  //   position: "Computer Science",
-  //   points: [
-  //     "Designed and implemented custom themes and layouts for clients using Webflow and WordPress Elementor.",
-  //     "Ensured responsive design for optimal viewing across multiple devices.",
-  //     "Utilized Webflow’s rich visual interface to create complex animations and interactions.",
-  //     "Implemented triggers and animations to enhance user experience and engagement.",
-  //     "Used timed animations to control the sequence and timing of animations.",
-  //     "Worked with multi-step animations to create complex, layered effects.",
-  //   ],
-  // },
+  {
+    title: "The Educators School",
+    date: "2009 - 2020",
+    image: Educators,
+    position: "Computer Science",
+    points: [
+      "Designed and implemented custom themes and layouts for clients using Webflow and WordPress Elementor.",
+      "Ensured responsive design for optimal viewing across multiple devices.",
+      "Utilized Webflow’s rich visual interface to create complex animations and interactions.",
+      "Implemented triggers and animations to enhance user experience and engagement.",
+      "Used timed animations to control the sequence and timing of animations.",
+      "Worked with multi-step animations to create complex, layered effects.",
+    ],
+  },
 ];
 
 const EducationHome = () => {
   return (
-    <div className="bg-[#0e191e] py-44 px-8 lg:px-0">
-      <h1 className="lg:text-6xl text-3xl font-extrabold text-white text-center pt-10">
-        Education
+    <div className="bg-[#0e191e] py-20 px-8 lg:px-24 text-white">
+      <h1 className="lg:text-6xl text-3xl font-extrabold text-center mt-20">
+        Experience
       </h1>
-      <TracingBeam className="mt-10">
+      {experiences.map((experience, index) => (
+        <div key={index} className="flex items-center">
+          <div className="flex flex-col w-1/2">
+            <h1 className="lg:text-3xl text-3xl font-semibold mt-28">
+              {experience.title}
+            </h1>
+            <h3 className="font-mono text-lg">{experience.position}</h3>
+
+            <h3 className="font-sans">{experience.date}</h3>
+            <ul className="list-disc my-10 ml-4 space-y-5 text-left">
+              {experience.points.map((point, index) => (
+                <li key={index}>{point}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="w-1/2 flex items-center justify-center">
+            <Image
+              src={experience.image}
+              alt="Cubicus.io Logo"
+              className="w-1/2 h-1/2"
+            />
+          </div>
+        </div>
+      ))}
+
+      {/* <TracingBeam className="mt-10">
         {experiences.map((experience, index) => (
           <div key={index}>
             <h1 className="text-xl text-white pt-2 font-bold">
@@ -70,7 +102,7 @@ const EducationHome = () => {
             </ul>
           </div>
         ))}
-      </TracingBeam>
+      </TracingBeam> */}
     </div>
   );
 };
