@@ -131,7 +131,7 @@ const mobileprojects = [
 const ProjectsHome = () => {
   return (
     <div className="bg-[#0e191e] lg:pb-10 lg:pt-20 lg:px-24 px-4">
-      <h1 className="lg:text-6xl text-3xl font-extrabold text-white text-center lg:py-10 lg:mb-20">
+      <h1 className="lg:text-6xl text-3xl font-extrabold text-white text-center py-4 lg:py-10 lg:mb-20">
         Projects
       </h1>
       <h2 className="text-white text-xl my-3">Web Apps</h2>

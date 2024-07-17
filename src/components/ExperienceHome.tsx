@@ -43,9 +43,12 @@ const ExperienceHome = () => {
         Experience
       </h1>
       {experiences.map((experience, index) => (
-        <div key={index} className="flex items-center">
-          <div className="flex flex-col w-1/2">
-            <h1 className="lg:text-3xl text-3xl font-semibold mt-28">
+        <div
+          key={index}
+          className="flex flex-wrap lg:flex-nowrap items-center justify-center"
+        >
+          <div className="flex flex-col w-full lg:w-1/2">
+            <h1 className="lg:text-3xl text-2xl font-semibold mt-28">
               {experience.title}
             </h1>
             <h3 className="font-mono text-lg">{experience.position}</h3>
