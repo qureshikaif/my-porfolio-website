@@ -19,14 +19,14 @@ const Navbar = () => {
         className="bg-[#0e1e25] rounded-none justify-between flex items-center z-50"
       >
         <Link href={"/"}>
-          <h1 className="text-white text-3xl font-extrabold space-x-3">
+          <h1 className="text-white text-3xl font-extrabold space-x-1">
             <span className="text-gray-600">M</span>
             <span className="text-gray-500">K</span>
             <span className="text-gray-400">Q</span>
           </h1>
         </Link>
         <div className="flex justify-between w-1/3">
-          <MenuItem
+          {/* <MenuItem
             setActive={setActive}
             active={active}
             item="Services"
@@ -39,13 +39,19 @@ const Navbar = () => {
               </HoveredLink>
               <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
             </div>
-          </MenuItem>
+          </MenuItem> */}
+          <Link
+            href={"/"}
+            className="text-white hover:underline hover:underline-offset-8"
+          >
+            Home
+          </Link>
 
           <MenuItem
             setActive={setActive}
             active={active}
             item="Projects"
-            className="text-white z-50"
+            className="text-white z-50 hover:underline hover:underline-offset-8"
           >
             <div className="z-50 text-sm grid grid-cols-2 gap-10 p-4">
               <ProductItem
@@ -74,7 +80,10 @@ const Navbar = () => {
               />
             </div>
           </MenuItem>
-          <Link className="text-white" href="/resume">
+          <Link
+            className="text-white hover:underline hover:underline-offset-8"
+            href="/project"
+          >
             Resume
           </Link>
         </div>
