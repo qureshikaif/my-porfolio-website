@@ -101,6 +101,7 @@ const mobileprojects = [
     techStack: ["React Native", "Blockchain", "Web3"],
     description:
       "The Air Jordan 4 Retro Reimagined Bred will release on Saturday, February 17, 2024. Your best opportunity to get these right now is by entering raffles and waiting for the official releases.",
+    link: "https://pixpel.io",
     images: [PixpelApp, PixpelApp, PixpelApp, PixpelApp, PixpelApp],
     startDate: "January 2024",
     endDate: "June 2024",
@@ -113,6 +114,7 @@ const mobileprojects = [
     techStack: ["React Native", "Node.js"],
     description:
       "The Air Jordan 4 Retro Reimagined Bred will release on Saturday, February 17, 2024. Your best opportunity to get these right now is by entering raffles and waiting for the official releases.",
+    link: "https://github.com/qureshikaif/adhd-coach-native",
     images: [
       ADHD_Coach_App,
       ADHD_Coach_App,
@@ -194,14 +196,28 @@ const ProjectsHome = () => {
                 <p className="text-base sm:text-xl text-white mt-4 mb-2 dark:text-neutral-200 pl-5">
                   {project.title}
                 </p>
-                <Link href="https://pixpel.io">
+                {/* <Link href="https://pixpel.io">
                   <ExternalLink className="size-3 mt-2" />
-                </Link>
+                </Link> */}
               </div>
 
-              <p className="text-sm text-neutral-300 dark:text-neutral-400 px-5 pb-5">
+              <p className="text-sm text-neutral-300 dark:text-neutral-400 px-5">
                 {project.description}
               </p>
+              <div className="pb-6 flex space-x-2 mt-4 ml-5">
+                <Link
+                  href={`/project/${project.id}`}
+                  className="flex items-center justify-center bg-[#2b2c2c] text-white text-xs font-semibold px-4 rounded-[10px] border border-white"
+                >
+                  Learn more
+                </Link>
+                <Link
+                  href={`${project.link}`}
+                  className="bg-[#0e191e] text-white text-xs font-semibold py-2 px-4 rounded-[10px] border border-white"
+                >
+                  Visit
+                </Link>
+              </div>
             </BackgroundGradient>
           </div>
         ))}
