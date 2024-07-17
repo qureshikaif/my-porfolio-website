@@ -18,13 +18,13 @@ const Navbar = () => {
         setActive={setActive}
         className="bg-[#0e1e25] rounded-none justify-between flex items-center z-50"
       >
-        <div>
+        <Link href={"/"}>
           <h1 className="text-white text-3xl font-extrabold space-x-3">
             <span className="text-gray-600">M</span>
             <span className="text-gray-500">K</span>
             <span className="text-gray-400">Q</span>
           </h1>
-        </div>
+        </Link>
         <div className="flex justify-between w-1/3">
           <MenuItem
             setActive={setActive}
@@ -74,7 +74,7 @@ const Navbar = () => {
               />
             </div>
           </MenuItem>
-          <Link className="text-white" href="#">
+          <Link className="text-white" href="/resume">
             Resume
           </Link>
         </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import { TracingBeam } from "./ui/tracing-beam";
 import Image from "next/image";
 import Cubicus from "@/../public/cubicus.svg";
 import CodingIcon from "@/../public/Coding.png";
