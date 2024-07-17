@@ -82,7 +82,7 @@ const Navbar = () => {
           </MenuItem>
           <Link
             className="text-white hover:underline hover:underline-offset-8"
-            href="/project"
+            href="/resume"
           >
             Resume
           </Link>
