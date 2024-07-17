@@ -1,7 +1,7 @@
 "use client";
-import { BackgroundGradient } from "./ui/background-gradient";
-import { ExternalLink } from "lucide-react";
 import Image from "next/image";
+import React from "react";
+import Slider from "react-slick";
 import Pixpel from "@/../public/thumbnails/pixpel.png";
 import Summare_AI from "@/../public/thumbnails/summare-ai.png";
 import SF_Business from "@/../public/thumbnails/sf-business-solutions.png";
@@ -10,9 +10,9 @@ import ScriptMatix from "@/../public/thumbnails/script-matix.png";
 import TechNTech from "@/../public/thumbnails/tech-n-tech.png";
 import PixpelApp from "@/../public/thumbnails/pxipel-app.jpeg";
 import ADHD_Coach_App from "@/../public/thumbnails/adhd-coach-app.jpeg";
-import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 
-const webprojects = [
+const projects = [
   {
     id: "pixpel-web",
     banner: Pixpel,
@@ -91,9 +91,6 @@ const webprojects = [
     endDate: "October 2022",
     organization: "TechNTech Co.",
   },
-];
-
-const mobileprojects = [
   {
     id: "pixpel-app",
     banner: PixpelApp,
@@ -126,88 +123,60 @@ const mobileprojects = [
   },
 ];
 
-const ProjectsHome = () => {
+const Project = () => {
+  const router = usePathname();
+  const projectId = router.split("/").pop();
+
+  const projectData = projects.find((project) => project.id === projectId);
+
+  if (!projectData) {
+    return <div>Project not found</div>;
+  }
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
-    <div className="bg-[#0e191e] lg:pb-10 lg:pt-20 lg:px-24 px-4">
-      <h1 className="lg:text-6xl text-3xl font-extrabold text-white text-center lg:py-10 lg:mb-20">
-        Projects
+    <div className="bg-[#0e191e] py-10 px-8 lg:px-24 text-white">
+      <div className="mb-10">
+        <Slider {...settings}>
+          {projectData.images.map((image, index) => (
+            <div key={index}>
+              <Image
+                src={image}
+                alt={`Project Image ${index + 1}`}
+                className="w-full h-auto"
+                width={1920}
+                height={1080}
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
+      <h1 className="lg:text-6xl text-3xl font-extrabold text-center mb-10">
+        {projectData.title}
       </h1>
-      <h2 className="text-white text-xl my-3">Web Apps</h2>
-      <div className="grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-6 gap-10">
-        {webprojects.map((project, index) => (
-          <div
-            // href={`/project/${project.id}`}
-            key={index}
-            className="lg:max-w-[95%]"
-          >
-            <BackgroundGradient className="bg-[#0e191e]  rounded-[10px] text-white max-w-sm p-0 dark:bg-zinc-900">
-              <Image
-                src={project.banner}
-                alt="jordans"
-                height="400"
-                width="400"
-                className="object-contain rounded-t-[10px]"
-              />
-              <div className="flex items-center space-x-2">
-                <p className="text-base sm:text-xl text-white mt-4 mb-2 dark:text-neutral-200 pl-5">
-                  {project.title}
-                </p>
-                {/* <Link href={project.link}>
-                  <ExternalLink className="size-3 mt-2" />
-                </Link> */}
-              </div>
-
-              <p className="text-sm text-neutral-300 dark:text-neutral-400 px-5 line-clamp-5">
-                {project.description}
-              </p>
-              <div className="pb-6 flex space-x-2 mt-4 ml-5">
-                <Link
-                  href={`/project/${project.id}`}
-                  className="flex items-center justify-center bg-[#2b2c2c] text-white text-xs font-semibold px-4 rounded-[10px] border border-white"
-                >
-                  Learn more
-                </Link>
-                <Link
-                  href={`${project.link}`}
-                  className="bg-[#0e191e] text-white text-xs font-semibold py-2 px-4 rounded-[10px] border border-white"
-                >
-                  Visit
-                </Link>
-              </div>
-            </BackgroundGradient>
-          </div>
+      <h2 className="text-2xl font-semibold mb-5">Tech Stack</h2>
+      <ul className="list-disc list-inside mb-10">
+        {projectData.techStack.map((tech, index) => (
+          <li key={index}>{tech}</li>
         ))}
-      </div>
-      <h2 className="text-white text-xl mb-3 mt-36">Mobile Apps</h2>
-      <div className="grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-6 gap-10">
-        {mobileprojects.map((project, index) => (
-          <div key={index} className="lg:max-w-[95%]">
-            <BackgroundGradient className="bg-[#0e191e] rounded-[10px] text-white max-w-sm p-0 dark:bg-zinc-900">
-              <Image
-                src={project.banner}
-                alt="jordans"
-                height="400"
-                width="400"
-                className="object-top object-cover rounded-t-[10px] h-60"
-              />
-              <div className="flex items-center space-x-2">
-                <p className="text-base sm:text-xl text-white mt-4 mb-2 dark:text-neutral-200 pl-5">
-                  {project.title}
-                </p>
-                <Link href="https://pixpel.io">
-                  <ExternalLink className="size-3 mt-2" />
-                </Link>
-              </div>
-
-              <p className="text-sm text-neutral-300 dark:text-neutral-400 px-5 pb-5">
-                {project.description}
-              </p>
-            </BackgroundGradient>
-          </div>
-        ))}
-      </div>
+      </ul>
+      <h2 className="text-2xl font-semibold mb-5">Description</h2>
+      <p className="mb-10">{projectData.description}</p>
+      <h2 className="text-xl font-semibold mb-2">Project Duration</h2>
+      <p className="mb-5">
+        {projectData.startDate} - {projectData.endDate}
+      </p>
+      <h2 className="text-xl font-semibold mb-2">Organization</h2>
+      <p className="mb-5">{projectData.organization}</p>
     </div>
   );
 };
 
-export default ProjectsHome;
+export default Project;

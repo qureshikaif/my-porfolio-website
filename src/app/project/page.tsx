@@ -6,7 +6,7 @@ import One from "@/../public/thumbnails/arbitrage.png";
 import Two from "@/../public/thumbnails/nosh-nft.png";
 import Three from "@/../public/thumbnails/summare-ai.png";
 
-const Project = () => {
+const ProjectTest = () => {
   const projectData = {
     title: "Awesome Project",
     techStack: ["React", "Next.js", "TypeScript", "Node.js"],
@@ -64,4 +64,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default ProjectTest;
