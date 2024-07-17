@@ -2,7 +2,7 @@ import React from "react";
 import { TracingBeam } from "./ui/tracing-beam";
 import Image from "next/image";
 import Cubicus from "@/../public/cubicus.svg";
-import Coding from "@/../public/coding.png";
+import CodingIcon from "@/../public/Coding.png";
 
 const experiences = [
   {
@@ -25,7 +25,7 @@ const experiences = [
     title: "Freelancing",
     date: "March 2023 - Present",
     position: "Freelancer",
-    image: Coding,
+    image: CodingIcon,
     points: [
       "Designed and implemented custom themes and layouts for clients using Webflow and WordPress Elementor.",
       "Ensured responsive design for optimal viewing across multiple devices.",
