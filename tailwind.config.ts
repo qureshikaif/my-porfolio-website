@@ -15,6 +15,7 @@ const config: Config = {
       animation: {
         aurora: "aurora 60s linear infinite",
         shimmer: "shimmer 2s linear infinite",
+        "spin-slow": "spin 3s linear infinite",
       },
       keyframes: {
         aurora: {
